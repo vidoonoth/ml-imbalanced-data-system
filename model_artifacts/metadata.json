@@ -1,0 +1,98 @@
+{
+  "dataset_path": "d:\\Unduhan\\model\\syslog_dataset_2026-07-19 (1).csv",
+  "label_definition": {
+    "0": "Normal/Allowed proxy",
+    "1": "Malware/Blocked proxy"
+  },
+  "excluded_from_features": [
+    "is_blocked",
+    "is_allowed",
+    "action",
+    "label",
+    "target",
+    "message"
+  ],
+  "numeric_features": [
+    "hour_sin",
+    "hour_cos",
+    "minute_sin",
+    "minute_cos",
+    "second_sin",
+    "second_cos",
+    "day_sin",
+    "day_cos",
+    "src_port",
+    "dst_port",
+    "src_ip_is_private",
+    "src_ip_is_global",
+    "src_ip_version",
+    "src_ip_octet1",
+    "src_ip_octet2",
+    "dst_ip_is_private",
+    "dst_ip_is_global",
+    "dst_ip_version",
+    "dst_ip_octet1",
+    "dst_ip_octet2"
+  ],
+  "categorical_features": [
+    "log_type",
+    "protocol",
+    "protocol_service",
+    "protocol_transport",
+    "policy_name",
+    "application",
+    "message_prefix"
+  ],
+  "feature_columns": [
+    "hour_sin",
+    "hour_cos",
+    "minute_sin",
+    "minute_cos",
+    "second_sin",
+    "second_cos",
+    "day_sin",
+    "day_cos",
+    "src_port",
+    "dst_port",
+    "src_ip_is_private",
+    "src_ip_is_global",
+    "src_ip_version",
+    "src_ip_octet1",
+    "src_ip_octet2",
+    "dst_ip_is_private",
+    "dst_ip_is_global",
+    "dst_ip_version",
+    "dst_ip_octet1",
+    "dst_ip_octet2",
+    "log_type",
+    "protocol",
+    "protocol_service",
+    "protocol_transport",
+    "policy_name",
+    "application",
+    "message_prefix"
+  ],
+  "input_dim": 102,
+  "embedding_dim": 64,
+  "decision_threshold": 0.5,
+  "metrics": {
+    "accuracy": 0.9991443240159726,
+    "balanced_accuracy": 0.9986522911051212,
+    "precision_malware": 1.0,
+    "recall_malware": 0.9973045822102425,
+    "f1_malware": 0.9986504723346828,
+    "roc_auc": 0.9997786671142134,
+    "pr_auc": 0.9996184249736936
+  },
+  "split_sizes": {
+    "train": 10516,
+    "validation": 3506,
+    "test": 3506
+  },
+  "scarf": {
+    "corruption_rate": 0.6,
+    "temperature": 1.0,
+    "batch_size": 128,
+    "pretrain_patience": 3
+  }
+}
